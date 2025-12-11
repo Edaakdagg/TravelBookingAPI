@@ -1,0 +1,12 @@
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/bin/Debug/net9.0/TravelBooking.Domain.deps.json
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/bin/Debug/net9.0/TravelBooking.Domain.dll
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/bin/Debug/net9.0/TravelBooking.Domain.pdb
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.AssemblyInfoInputs.cache
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.AssemblyInfo.cs
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.csproj.CoreCompileInputs.cache
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.sourcelink.json
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.dll
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/refint/TravelBooking.Domain.dll
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/TravelBooking.Domain.pdb
+/Users/edaakdag/TravelBookingAPI/TravelBooking.Domain/obj/Debug/net9.0/ref/TravelBooking.Domain.dll

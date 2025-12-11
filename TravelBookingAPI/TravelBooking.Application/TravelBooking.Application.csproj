@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- JWT token oluşturma için gerekli paket -->
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" /> 
+        <!-- IConfiguration ve IServiceCollection kullanmak için gerekli temel paketler -->
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0-preview.3" /> 
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-preview.3" /> 
+        <!-- JWT kimlik doğrulama için gerekli temel paket -->
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0-preview.3" /> 
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Domain katmanına referans (User Entity'i görmek için ZORUNLU) -->
+        <ProjectReference Include="..\TravelBooking.Domain\TravelBooking.Domain.csproj" />
+        <!-- Infrastructure katmanına referans (IGenericRepository'yi görmek için ZORUNLU) -->
+        <ProjectReference Include="..\TravelBooking.Infrastructure\TravelBooking.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

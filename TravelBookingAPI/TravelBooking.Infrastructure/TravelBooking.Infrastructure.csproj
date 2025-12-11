@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- EF Core Paketleri (DbContext ve Migration için zorunlu) -->
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.3" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0-preview.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Domain katmanına bağımlılık (Entity'ler ve BaseEntity için) -->
+        <ProjectReference Include="..\TravelBooking.Domain\TravelBooking.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
