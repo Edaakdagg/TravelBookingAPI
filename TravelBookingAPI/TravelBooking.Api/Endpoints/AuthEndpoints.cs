@@ -8,42 +8,39 @@ namespace TravelBooking.Api.Endpoints
 {
     public static class AuthEndpoints
     {
-        // Extension metot ile endpoint'leri haritalar
+       
         public static void MapAuthEndpoints(this IEndpointRouteBuilder app)
         {
             var group = app.MapGroup("/api/auth")
-                           .WithTags("Authentication"); // Swagger'da gruplama için
+                           .WithTags("Authentication"); 
 
-            // 1. KAYIT (Register) Endpoint'i
+            
             group.MapPost("/register", async (
                 [FromBody] UserCreateDto userCreateDto, 
                 IUserService userService) =>
             {
-                // DÜZELTME: RegisterAsync metodu çağrılıyor
+                
                 var result = await userService.RegisterAsync(userCreateDto);
 
                 return Results.Ok(result); 
             })
             .WithName("RegisterUser")
             .Produces<UserResponseDto>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status400BadRequest); // Swagger dökümantasyonu için
+            .Produces(StatusCodes.Status400BadRequest); 
 
-            // 2. GİRİŞ (Login) Endpoint'i
+            
             group.MapPost("/login", async (
                 [FromBody] UserLoginDto userLoginDto, 
                 IUserService userService) =>
             {
                 try
                 {
-                    // DÜZELTME: LoginAsync metodu çağrılıyor ve tuple geri dönüşü yakalanıyor
                     var (token, userDto) = await userService.LoginAsync(userLoginDto);
 
-                    // Başarılı giriş: Token ve kullanıcı bilgileri geri döndürülüyor
                     return Results.Ok(new { Token = token, User = userDto });
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    // UserService'ten gelen yetkilendirme hatasını yakalar
                     return Results.Unauthorized();
                 }
                 

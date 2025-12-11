@@ -1,6 +1,6 @@
 using System.Net;
 using System.Text.Json;
-using TravelBooking.Api.Models; // ApiResponse'u kullanmak için
+using TravelBooking.Api.Models; 
 
 namespace TravelBooking.Api.Middleware
 {
@@ -32,7 +32,7 @@ namespace TravelBooking.Api.Middleware
             HttpStatusCode status = HttpStatusCode.InternalServerError;
             string message = "Bir hata oluştu.";
 
-            // Özel hataları yakalama (UserService'ten fırlatılan özel mesajları kullanır)
+           
             if (exception is UnauthorizedAccessException)
             {
                 status = HttpStatusCode.Unauthorized; // 401
@@ -54,7 +54,7 @@ namespace TravelBooking.Api.Middleware
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)status;
 
-            var response = new ApiResponse<object>(null, message, false); // success: false
+            var response = new ApiResponse<object>(null, message, false); 
 
             var jsonResponse = JsonSerializer.Serialize(response);
             return context.Response.WriteAsync(jsonResponse);

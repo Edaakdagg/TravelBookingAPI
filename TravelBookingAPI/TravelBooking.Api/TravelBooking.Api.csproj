@@ -17,7 +17,6 @@
     <!-- 4. Hata Çözümü: Microsoft IdentityModel -->
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0" /> 
     
-    <!-- EF Core Tools, migration'ı API projesi üzerinden çalıştırabilmek için gereklidir -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.3">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
@@ -26,9 +25,9 @@
 
   <ItemGroup>
     <!-- GEREKLİ PROJE REFERANSLARI -->
-    <!-- 1. Hata Çözümü: Application katmanına erişim (IUserService, DTO'lar) -->
+
     <ProjectReference Include="..\TravelBooking.Application\TravelBooking.Application.csproj" />
-    <!-- 2. Hata Çözümü: Infrastructure katmanına erişim (DbContext, Repolar) -->
+ 
     <ProjectReference Include="..\TravelBooking.Infrastructure\TravelBooking.Infrastructure.csproj" />
   </ItemGroup>
 

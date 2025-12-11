@@ -12,15 +12,15 @@ namespace TravelBooking.Domain.Entities
         public int TotalGuests { get; set; }
         public decimal TotalPrice { get; set; }
 
-        // Room ilişkisi
+      
         public int RoomId { get; set; }
         public Room Room { get; set; }
 
-        // User ilişkisi (opsiyonel)
+        
         public int? UserId { get; set; }
         public User? User { get; set; }
 
-        // Hotel ilişkisi (zorunlu)
+        
         public int HotelId { get; set; }
         public Hotel Hotel { get; set; }
     }

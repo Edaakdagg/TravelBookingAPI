@@ -73,7 +73,6 @@ app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization(); // Bu noktada hata veriyordu, şimdi servisler tanımlı olduğu için sorun çözülmeli
 
-// Minimal API Endpoint'lerini haritala
 app.MapAuthEndpoints(); 
 
 app.Run();

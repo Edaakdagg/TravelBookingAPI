@@ -141,7 +141,7 @@ namespace TravelBooking.Infrastructure.Migrations
                 column: "HotelId");
         }
 
-        /// <inheritdoc />
+    
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

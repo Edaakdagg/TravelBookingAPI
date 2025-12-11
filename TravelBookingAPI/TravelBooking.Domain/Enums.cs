@@ -11,14 +11,12 @@ namespace TravelBooking.Domain.Enums
         Deluxe = 4
     }
 
-    /// <summary>
-    /// Rezervasyonun mevcut durumunu tanımlar.
-    /// </summary>
+    
     public enum ReservationStatus
     {
-        Pending = 1, // Beklemede (Ödeme veya onay bekleniyor)
-        Confirmed = 2, // Onaylandı (Rezervasyon kesinleşti)
-        Cancelled = 3, // İptal Edildi
-        Completed = 4 // Tamamlandı (Çıkış yapıldı)
+        Pending = 1, 
+        Confirmed = 2, 
+        Cancelled = 3, 
+        Completed = 4 
     }
 }
