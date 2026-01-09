@@ -1,0 +1,75 @@
+@host = http://localhost:5092
+
+### 1. Register User
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "Password123!"
+}
+
+### 2. Login User
+# Returns a Token (if auth is implemented) and User info.
+# Note the User ID from the response for creating reservations.
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "Password123!"
+}
+
+### 3. Create City
+POST {{host}}/api/cities
+Content-Type: application/json
+
+{
+    "name": "Istanbul",
+    "country": "Turkey"
+}
+
+### 4. Get Cities
+# Note the City ID from the response to use in Hotel creation.
+GET {{host}}/api/cities
+
+### 5. Create Hotel
+# Replace cityId with a valid ID from step 4
+POST {{host}}/api/hotels
+Content-Type: application/json
+
+{
+    "name": "Grand Hotel",
+    "address": "Taksim Sq.",
+    "rating": 4.5,
+    "cityId": 1
+}
+
+### 6. Create Room
+# Replace hotelId with a valid ID from step 5
+POST {{host}}/api/rooms
+Content-Type: application/json
+
+{
+    "roomNumber": "101",
+    "price": 150.00,
+    "type": "Double",
+    "isAvailable": true,
+    "hotelId": 1
+}
+
+### 7. Create Reservation
+# Replace userId (from Login/Register) and roomId (from Room creation)
+POST {{host}}/api/reservations
+Content-Type: application/json
+
+{
+    "checkInDate": "2023-12-25T14:00:00",
+    "checkOutDate": "2023-12-30T10:00:00",
+    "userId": 1,
+    "roomId": 1
+}
+
+### 8. Get Reservations
+GET {{host}}/api/reservations
